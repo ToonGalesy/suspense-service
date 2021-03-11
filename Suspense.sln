@@ -7,9 +7,14 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SuspenseDb", "SuspenseDb\Su
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuspenseService", "SuspenseService\SuspenseService.csproj", "{15C730DC-7350-4A0C-8207-359CD34588FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suspense.Dal", "Suspense.Dal\Suspense.Dal.csproj", "{14DE7762-DA12-43F1-B51F-F12939D5A317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Suspense.Dal", "Suspense.Dal\Suspense.Dal.csproj", "{14DE7762-DA12-43F1-B51F-F12939D5A317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Suspense.Ddd", "Suspense.Ddd\Suspense.Ddd.csproj", "{4EEEC078-25C2-4900-911C-DBFA9D8FE4DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Suspense.Ddd", "Suspense.Ddd\Suspense.Ddd.csproj", "{4EEEC078-25C2-4900-911C-DBFA9D8FE4DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CD9985B-4063-4010-9B85-0418B02F5E77}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
