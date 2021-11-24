@@ -1,0 +1,49 @@
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #start>
+      <mat-nav-list>
+          <a mat-list-item routerLink="/">
+              <mat-icon>library_books</mat-icon>
+              <span>Courses</span>
+          </a>
+          <a mat-list-item routerLink="about">
+              <mat-icon>question_answer</mat-icon>
+              <span>About</span>
+          </a>
+          <a mat-list-item>
+              <mat-icon>person_add</mat-icon>
+              <span>Register</span>
+          </a>
+          <a mat-list-item>
+              <mat-icon>account_circle</mat-icon>
+              <span>Login</span>
+          </a>
+      </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-toolbar color="primary">
+      <button mat-icon-button (click)="start.open('mouse')">
+          <mat-icon>menu</mat-icon>
+      </button>
+  </mat-toolbar>
+
+  <table mat-table class="submissions-table mat-elevation-z8" [dataSource]="submissions">
+    <ng-container matColumnDef="SubmissionType">
+      <mat-header-cell *matHeaderCellDef>Submission Type</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.SubmissionType}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="SubmissionDate">
+      <mat-header-cell *matHeaderCellDef>Submission Date</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.SubmissionDate}} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="SubmissionStatusId">
+      <mat-header-cell *matHeaderCellDef>Submission Status</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.SubmissionStatusId}} </mat-cell>
+    </ng-container>  
+  
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>    
+  </table> 
+</mat-sidenav-container>

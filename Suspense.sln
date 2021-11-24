@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "suspense-service-tests", "suspense-service-tests\suspense-service-tests.csproj", "{E5C62AAF-6ACD-405D-AF89-364037A7AA27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{4EEEC078-25C2-4900-911C-DBFA9D8FE4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EEEC078-25C2-4900-911C-DBFA9D8FE4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EEEC078-25C2-4900-911C-DBFA9D8FE4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C62AAF-6ACD-405D-AF89-364037A7AA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C62AAF-6ACD-405D-AF89-364037A7AA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C62AAF-6ACD-405D-AF89-364037A7AA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C62AAF-6ACD-405D-AF89-364037A7AA27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

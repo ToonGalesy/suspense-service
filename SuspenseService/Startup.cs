@@ -5,7 +5,6 @@ using System.Reflection;
 using MediatR;
 using Microsoft.AspNet.OData.Builder;
 using Microsoft.AspNet.OData.Extensions;
-using Microsoft.AspNet.OData.Query;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Formatters;
@@ -17,8 +16,10 @@ using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.Net.Http.Headers;
 using Microsoft.OData.Edm;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.OData;
 using Suspense.Dal.Infrastructure;
 using Suspense.Dal.Models;
+using Microsoft.OData.ModelBuilder;
 
 namespace SuspenseService
 {
@@ -35,7 +36,7 @@ namespace SuspenseService
         public void ConfigureServices(IServiceCollection services)
         {
             // This is needed because we are exposing our DAL model so not really fit for serialisation but hey ho
-            services.AddControllers().AddNewtonsoftJson(e => e.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddControllers().AddNewtonsoftJson(e => e.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore).AddOData();
 
             services.AddDbContext<SuspenseContext>(options =>
             {
@@ -43,8 +44,6 @@ namespace SuspenseService
             });
 
             services.AddMediatR(typeof(Startup).Assembly);
-
-            services.AddOData();
 
             // Urgh this is all needed for Swagger UI
             services.AddMvc(options =>
